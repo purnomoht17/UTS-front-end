@@ -3,7 +3,8 @@ $(document).ready(function() {
     var videos = [
         "assets/videos/food.mp4",
         "assets/videos/running.mp4",
-        "assets/videos/teknologi.mp4"
+        "assets/videos/teknologi.mp4",
+        "assets/videos/gayahidup.mp4"
     ];
 
     var currentVideoIndex = 0;
