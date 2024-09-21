@@ -8,6 +8,21 @@ body.teknologi header {
     color: white;
 }
 
+body.makanansehat header {
+    background-color: black;
+    color: white;
+}
+
+body.olahraga header {
+    background-color: black;
+    color: white;
+}
+
+body.gayahidup header {
+    background-color: black;
+    color: white;
+}
+
 .video-background {
     position: relative;
     height: 100vh;
