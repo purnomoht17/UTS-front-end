@@ -91,5 +91,11 @@ $(document).ready(function() {
         checkVisibility(); // Run on page load in case the element is already visible
     });
     
+    const form = document.getElementById('contact-form');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); 
+        alert("Pesan terkirim"); 
+    });
     
 });

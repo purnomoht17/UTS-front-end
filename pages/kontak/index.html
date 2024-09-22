@@ -36,7 +36,7 @@
             <div class="dropdown"><a href="/pages/teknologi/index.html">Teknologi</a>
                 <div class="dropdown-content">
                     <div><a href="/pages/teknologi/smartphone.html">Smartphone</a></div>
-                    <div><a href="/pages/teknologi/AI.html">Artificcial Intelligence</a></div>
+                    <div><a href="/pages/teknologi/AI.html">Artificial Intelligence</a></div>
                     <div><a href="/pages/teknologi/laptop.html">Laptop</a></div>
                 </div>
             </div>
@@ -73,12 +73,12 @@
                 <img src="/assets/images/form-icon.png" alt="Logo Formulir">
                 <h3>FORMULIR KONTAK</h3>
             </div>
-            <form action="/submit" method="POST">
+            <form id="contact-form" action="/submit" method="POST">
                 <input type="text" name="nama" placeholder="Nama Anda" required><br>
                 <input type="text" name="pekerjaan" placeholder="Pekerjaan Anda" required><br>
                 <input type="email" name="email" placeholder="Email Anda" required><br>
                 <input type="tel" name="telepon" placeholder="Telepon Anda" required><br>
-                <select name="jenis_kontak">
+                <select name="jenis_kontak" required>
                     <option value="">Pilih Jenis Kontak</option>
                     <option value="pertanyaan">Pertanyaan</option>
                     <option value="komplain">Komplain</option>
