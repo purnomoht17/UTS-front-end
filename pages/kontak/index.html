@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yoga dan Meditasi</title>
+    <title>Kontak</title>
     <link rel="stylesheet" href="/style.css">
 </head>
-<body class="olahraga">
+<body class="kontak">
     <header>
         <div class="logo">
-            <img src="/assets/images/logo.png" alt="Logo">
+            <a href="/index.html">
+                <img src="/assets/images/logo.png" alt="Logo">
+            </a>
             <span>Jessen Lifestyle</span>
         </div>
         <div class="nav-links">
@@ -41,43 +43,62 @@
         </div>
     </header>
 
-    <div class="content-container visible">
-        <div class="content-item">
-            <a href="https://www.halodoc.com/artikel/ini-cara-meditasi-yang-benar-untuk-pemula" target="_blank">
-                <img src="/assets/images/ym1.png" alt="Meditasi 1">
-                <div class="content-info">
-                    <h2>Cara Meditasi yang Benar untuk Pemula</h2>
-                </div>
-            </a>
+    <div class="content-container-kontak">
+        <div class="sisi-kiri">
+            <h1>Kontak</h1>
+            <p>Silakan menghubungi kami untuk info lebih lanjut</p>
+
+            <div>
+                <img src="/assets/images/address-icon.png" alt="Logo Alamat">
+                <h3>ALAMAT</h3>
+            </div>
+            <p>Letjen S. Parman St No.1, RT.6/RW.16, Tomang, Grogol petamburan, West Jakarta City, Jakarta 11440</p>
+
+            <div>
+                <img src="/assets/images/phone-icon.png" alt="Logo Telepon">
+                <h3>TELEPON</h3> 
+            </div>
+            <p>Tel: (021) 5671747</p>
+
+            <div>
+                <img src="/assets/images/gps-icon.png" alt="Logo Lokasi">
+                <h3>LOKASI</h3>
+                <iframe src="/assets/images/map.png" width="450" height="350"></iframe>
+            </div>
         </div>
-        <div class="content-item">
-            <a href="https://www.alodokter.com/8-cara-yoga-yang-wajib-diketahui-pemula" target="_blank">
-                <img src="/assets/images/ym2.png" alt="Meditasi 2">
-                <div class="content-info">
-                    <h2>8 Cara Yoga yang Wajib Diketahui Pemula</h2>
-                </div>
-            </a>
-        </div>
-        <div class="content-item">
-            <a href="https://senamyoga.com/yoga-meditasi/" target="_blank">
-                <img src="/assets/images/ym3.png" alt="Meditasi 3">
-                <div class="content-info">
-                    <h2>Yoga dan Meditasi untuk Kesehatan Mental</h2>
-                </div>
-            </a>
+
+        <div class="sisi-kanan">
+            <div>
+                <img src="/assets/images/form-icon.png" alt="Logo Formulir">
+                <h3>FORMULIR KONTAK</h3>
+            </div>
+            <form action="/submit" method="POST">
+                <input type="text" name="nama" placeholder="Nama Anda" required><br>
+                <input type="text" name="pekerjaan" placeholder="Pekerjaan Anda" required><br>
+                <input type="email" name="email" placeholder="Email Anda" required><br>
+                <input type="tel" name="telepon" placeholder="Telepon Anda" required><br>
+                <select name="jenis_kontak">
+                    <option value="">Pilih Jenis Kontak</option>
+                    <option value="pertanyaan">Pertanyaan</option>
+                    <option value="komplain">Komplain</option>
+                    <option value="saran">Saran</option>
+                </select><br>
+                <textarea name="pesan" placeholder="Pesan Anda" required></textarea><br>
+                <button type="submit">Kirim</button>
+            </form>
         </div>
     </div>
-    
+
     <footer>
         <div class="social-links">
             <a href="https://facebook.com" target="_blank">Facebook</a>
             <a href="https://twitter.com" target="_blank">Twitter</a>
-            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://instagram.com/heru_purnomo17" target="_blank">Instagram</a>
         </div>
         <p>&copy; 2024 Jessen Lifestyle. All rights reserved.</p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
 </body>
 </html>
