@@ -424,3 +424,48 @@ footer p {
         max-width: 100%; /* Item menyesuaikan lebar layar pada perangkat kecil */
     }
 }
+
+.container {
+    max-width: 800px; /* Lebar maksimal untuk konten */
+    margin: 0 auto; /* Pusatkan konten */
+    padding: 20px; /* Padding di sekitar konten */
+    background-color: #fff; /* Warna latar belakang putih */
+    border-radius: 10px; /* Sudut melengkung pada konten */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+}
+
+.container h1 {
+    font-size: 2.5rem; /* Ukuran font untuk judul utama */
+    margin-bottom: 20px; /* Jarak di bawah judul */
+    color: #333; /* Warna teks */
+    text-align: center; /* Pusatkan teks */
+}
+
+.container img {
+    width: 100%; /* Gambar responsif */
+    border-radius: 10px; /* Sudut melengkung pada gambar */
+    margin-bottom: 20px; /* Jarak di bawah gambar */
+}
+
+.container h2 {
+    font-size: 2rem; /* Ukuran font untuk sub-judul */
+    margin: 20px 0 10px; /* Jarak di atas dan bawah */
+    color: #555; /* Warna teks untuk sub-judul */
+}
+
+.container h3 {
+    font-size: 1.5rem; /* Ukuran font untuk sub-sub-judul */
+    margin: 15px 0 5px; /* Jarak di atas dan bawah */
+    color: #666; /* Warna teks untuk sub-sub-judul */
+}
+
+.container ul, .container ol {
+    margin: 10px 0; /* Jarak di atas dan bawah */
+    padding-left: 20px; /* Padding di sebelah kiri untuk daftar */
+}
+
+.container p {
+    line-height: 1.6; /* Jarak antar baris */
+    margin-bottom: 15px; /* Jarak di bawah paragraf */
+    color: #444; /* Warna teks */
+}
