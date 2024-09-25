@@ -314,6 +314,18 @@ video.background-video {
     border-radius: 10px; /* Sudut melengkung pada iframe */
 }
 
+.section-title {
+    text-align: center; /* Membuat teks berada di tengah */
+    font-size: 3rem; /* Ukuran teks lebih besar */
+    color: #333; /* Warna teks */
+    margin-bottom: 30px; /* Jarak bawah teks */
+    font-weight: bold; /* Teks tebal */
+    text-transform: uppercase; /* Membuat semua huruf kapital */
+    letter-spacing: 2px; /* Jarak antar huruf */
+    line-height: 1.2; /* Jarak antar baris */
+}
+
+
 #news-container {
     display: flex;
     flex-wrap: wrap;
@@ -470,4 +482,89 @@ footer p {
     line-height: 1.6; /* Jarak antar baris */
     margin-bottom: 15px; /* Jarak di bawah paragraf */
     color: #444; /* Warna teks */
+}
+
+
+/* Jessen Lifestyle Section */
+.JessenLifestyle-section {
+    background-color: #fafafa; /* Latar belakang ringan dan bersih */
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 50px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Efek bayangan untuk memberikan kedalaman */
+}
+
+.JessenLifestyle-section h2 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+    color: #333; /* Warna teks yang lebih tegas */
+}
+
+.JessenLifestyle-section p {
+    font-size: 1.1em;
+    color: #555; /* Warna teks yang ringan namun tetap kontras */
+    margin-bottom: 25px;
+}
+
+.JessenLifestyle-section form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap; /* Agar form responsif */
+}
+
+.JessenLifestyle-section input[type="email"] {
+    padding: 12px 18px;
+    font-size: 1em;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    width: 320px;
+    max-width: 100%;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Memberi kesan teks terbenam */
+    transition: border-color 0.3s ease;
+}
+
+.JessenLifestyle-section input[type="email"]:focus {
+    border-color: #38b6ff; /* Warna yang lebih cerah saat input diaktifkan */
+    outline: none;
+}
+
+.JessenLifestyle-section button {
+    padding: 12px 30px;
+    font-size: 1em;
+    background-color: #38b6ff; /* Warna tombol yang serasi */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.JessenLifestyle-section button:hover {
+    background-color: #2a9ce2; /* Warna tombol saat di hover */
+}
+
+@media (max-width: 768px) {
+    .JessenLifestyle-section form {
+        flex-direction: column;
+        gap: 20px; /* Jarak antara input dan tombol pada layar kecil */
+    }
+
+    .JessenLifestyle-section input[type="email"] {
+        width: 100%; /* Input email memenuhi lebar layar pada perangkat mobile */
+    }
+}
+
+.subscription-message {
+    display: none; /* Mengatur tampilan menjadi tidak terlihat secara default */
+    color: green; /* Warna teks hijau */
+    margin-top: 10px; /* Jarak atas */
+    font-size: 1rem; /* Ukuran font */
+    text-align: center; /* Pusatkan teks */
+    padding: 10px; /* Tambahkan padding untuk mempercantik tampilan */
+    border: 2px solid green; /* Tambahkan border hijau untuk memberikan kontras */
+    border-radius: 5px; /* Sudut melengkung */
+    background-color: rgba(144, 238, 144, 0.2); /* Latar belakang hijau pucat untuk kontras */
 }
