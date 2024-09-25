@@ -186,7 +186,9 @@ video.background-video {
     flex-wrap: wrap;
     justify-content: center;
     padding: 50px 20px;
-    background-color: #f4f4f4; /* Color background untuk konten */
+    background-color: #f4f4f4;
+    border-top: 5px solid #333; /* Garis batas di bagian atas */
+    margin-top: 20px; /* Jarak di atas konten */
 }
 
 
