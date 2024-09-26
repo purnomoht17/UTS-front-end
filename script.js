@@ -69,6 +69,7 @@ $(document).ready(function() {
         changeVideo();
     });
 
+    // Scroll-triggered animation for content visibility
     $(document).ready(function() {
         // Function to check if the content-container is visible on scroll
         function checkVisibility() {
@@ -90,12 +91,20 @@ $(document).ready(function() {
         $(window).on('scroll', checkVisibility);
         checkVisibility(); // Run on page load in case the element is already visible
     });
-    
-    const form = document.getElementById('contact-form');
 
-    form.addEventListener('submit', function(event) {
-        event.preventDefault(); 
-        alert("Pesan terkirim"); 
+    // Form submission event for contact form
+    const contactForm = $('#contact-form');
+
+    contactForm.on('submit', function(event) {
+        event.preventDefault();  // Prevent default form submission behavior
+        alert('Pesan Anda telah terkirim!');  // Display alert when form is submitted
     });
-    
+
+    // Form submission event for subscribe form
+    const subscribeForm = $('#subscribe-form');
+
+    subscribeForm.on('submit', function(event) {
+        event.preventDefault();  // Prevent default form submission behavior
+        alert('Anda berhasil berlangganan!');  // Display alert when form is submitted
+    });
 });
