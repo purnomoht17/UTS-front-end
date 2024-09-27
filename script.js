@@ -76,7 +76,7 @@ $(document).ready(function() {
             var scrollPosition = $(window).scrollTop();
             var windowHeight = $(window).height();
             var contentContainerTop = $('.content-container').offset().top;
-    
+
             // If the content-container is in view, add the 'visible' class
             if (scrollPosition + windowHeight > contentContainerTop) {
                 $('.content-container').addClass('visible');
@@ -86,7 +86,7 @@ $(document).ready(function() {
             console.log('Container top:', contentContainerTop);
             console.log('Container visible:', $('.content-container').hasClass('visible'));
         }
-    
+
         // Check visibility on scroll and on page load
         $(window).on('scroll', checkVisibility);
         checkVisibility(); // Run on page load in case the element is already visible
@@ -98,6 +98,9 @@ $(document).ready(function() {
     contactForm.on('submit', function(event) {
         event.preventDefault();  // Prevent default form submission behavior
         alert('Pesan Anda telah terkirim!');  // Display alert when form is submitted
+
+        // Kosongkan semua input setelah pesan terkirim
+        contactForm.trigger("reset");
     });
 
     // Form submission event for subscribe form
@@ -105,6 +108,19 @@ $(document).ready(function() {
 
     subscribeForm.on('submit', function(event) {
         event.preventDefault();  // Prevent default form submission behavior
-        alert('Anda berhasil berlangganan!');  // Display alert when form is submitted
+        var email = $('[name="email"]').val();
+
+        if (validateEmail(email)) {
+            alert('Anda berhasil Bergabung!');  // Display alert when form is submitted
+            $('[name="email"]').val('');  // Kosongkan input email setelah sukses
+        } else {
+            alert('Masukkan email yang valid.');  // Tampilkan pesan kesalahan jika email tidak valid
+        }
     });
+
+    // Fungsi untuk memvalidasi format email
+    function validateEmail(email) {
+        var re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        return re.test(email);
+    }
 });
