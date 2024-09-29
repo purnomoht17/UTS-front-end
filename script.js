@@ -126,14 +126,33 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-    // Tampilkan iklan setelah 3 detik
-    setTimeout(function() {
-        $('#ads-container').css('bottom', '0'); // Naikkan iklan
-    }, 3000);
+    // Ambil jumlah tampilan iklan dari sessionStorage
+    let adDisplayCount = sessionStorage.getItem('adDisplayCount') || 0;
+
+    
+    function showAd() {
+        if (adDisplayCount < 6) {
+            setTimeout(function() {
+                $('#ads-container').css('bottom', '0'); // Naikkan iklan
+                adDisplayCount++;
+                sessionStorage.setItem('adDisplayCount', adDisplayCount); // Simpan jumlah tampilan di sessionStorage
+            }, 3000);
+        }
+    }
+
+    // Panggil fungsi untuk menampilkan iklan
+    showAd();
 
     // Fungsi untuk menutup iklan
     $('#close-ads').on('click', function() {
         $('#ads-container').css('bottom', '-100%'); // Turunkan iklan
     });
+
+    // Reset adDisplayCount hanya jika halaman baru dibuka (sesi baru dimulai)
+    if (!sessionStorage.getItem('pageVisited')) {
+        sessionStorage.setItem('pageVisited', 'true');
+        sessionStorage.setItem('adDisplayCount', 0); // Reset tampilan iklan di halaman baru
+    }
 });
+
 
