@@ -31,3 +31,16 @@ $(document).ready(function () {
         $('#news-container').html('<p>Gagal mengambil berita. Silakan coba lagi nanti.</p>');
     });
 });
+
+
+$(document).ready(function() {
+    // Tampilkan iklan setelah 3 detik
+    setTimeout(function() {
+        $('#ads-container').css('bottom', '0'); // Naikkan iklan
+    }, 3000);
+
+    // Fungsi untuk menutup iklan
+    $('#close-ads').on('click', function() {
+        $('#ads-container').css('bottom', '-100%'); // Turunkan iklan
+    });
+});

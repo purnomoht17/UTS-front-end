@@ -187,8 +187,8 @@ video.background-video {
     justify-content: center;
     padding: 50px 20px;
     background-color: #f4f4f4;
-    border-top: 5px solid #333; /* Garis batas di bagian atas */
-    margin-top: 20px; /* Jarak di atas konten */
+    border-top: 5px solid #333; 
+    margin-top: 20px; 
 }
 
 
@@ -309,20 +309,20 @@ video.background-video {
 }
 
 .sisi-kiri iframe {
-    width: 100%; /* Membuat iframe responsif */
-    border: none; /* Menghilangkan border default */
-    border-radius: 10px; /* Sudut melengkung pada iframe */
+    width: 100%; 
+    border: none; 
+    border-radius: 10px; 
 }
 
 .section-title {
-    text-align: center; /* Membuat teks berada di tengah */
-    font-size: 3rem; /* Ukuran teks lebih besar */
-    color: #333; /* Warna teks */
-    margin-bottom: 30px; /* Jarak bawah teks */
-    font-weight: bold; /* Teks tebal */
-    text-transform: uppercase; /* Membuat semua huruf kapital */
-    letter-spacing: 2px; /* Jarak antar huruf */
-    line-height: 1.2; /* Jarak antar baris */
+    text-align: center; 
+    font-size: 3rem; 
+    color: #333; 
+    margin-bottom: 30px; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    line-height: 1.2; 
 }
 
 
@@ -330,9 +330,9 @@ video.background-video {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px; /* Jarak antar konten */
+    gap: 30px;
     padding: 40px 20px;
-    background-color: #f9f9f9; /* Warna latar belakang */
+    background-color: #f9f9f9;
 }
 
 #news-container .news-item {
@@ -342,14 +342,14 @@ video.background-video {
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    max-width: 350px; /* Lebar maksimal item */
+    max-width: 350px; 
     width: 100%;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 #news-container .news-item:hover {
-    transform: translateY(-5px); /* Efek hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Efek bayangan saat hover */
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
 }
 
 #news-container .news-item img {
@@ -419,7 +419,7 @@ footer p {
 
 @media (max-width: 768px) {
     .content-container-kontak {
-        flex-direction: column; /* Membuat tampilan vertikal pada perangkat kecil */
+        flex-direction: column; 
     }
 
     .sisi-kiri, .sisi-kanan {
@@ -427,7 +427,7 @@ footer p {
     }
 }
 
-/* Responsif untuk layar lebih kecil */
+
 @media (max-width: 768px) {
     #news-container {
         flex-direction: column;
@@ -435,126 +435,173 @@ footer p {
     }
     
     #news-container .news-item {
-        max-width: 100%; /* Item menyesuaikan lebar layar pada perangkat kecil */
+        max-width: 100%; 
     }
 }
 
 .container {
-    max-width: 800px; /* Lebar maksimal untuk konten */
-    margin: 0 auto; /* Pusatkan konten */
-    padding: 20px; /* Padding di sekitar konten */
-    background-color: #fff; /* Warna latar belakang putih */
-    border-radius: 10px; /* Sudut melengkung pada konten */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    max-width: 800px; 
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .container h1 {
-    font-size: 2.5rem; /* Ukuran font untuk judul utama */
-    margin-bottom: 20px; /* Jarak di bawah judul */
-    color: #333; /* Warna teks */
-    text-align: center; /* Pusatkan teks */
+    font-size: 2.5rem; 
+    margin-bottom: 20px; 
+    color: #333; 
+    text-align: center; 
 }
 
 .container img {
-    width: 100%; /* Gambar responsif */
-    border-radius: 10px; /* Sudut melengkung pada gambar */
-    margin-bottom: 20px; /* Jarak di bawah gambar */
+    width: 100%; 
+    border-radius: 10px; 
+    margin-bottom: 20px; 
 }
 
 .container h2 {
-    font-size: 2rem; /* Ukuran font untuk sub-judul */
-    margin: 20px 0 10px; /* Jarak di atas dan bawah */
-    color: #555; /* Warna teks untuk sub-judul */
+    font-size: 2rem; 
+    margin: 20px 0 10px; 
+    color: #555; 
 }
 
 .container h3 {
-    font-size: 1.5rem; /* Ukuran font untuk sub-sub-judul */
-    margin: 15px 0 5px; /* Jarak di atas dan bawah */
-    color: #666; /* Warna teks untuk sub-sub-judul */
+    font-size: 1.5rem;
+    margin: 15px 0 5px; 
+    color: #666; 
 }
 
 .container ul, .container ol {
-    margin: 10px 0; /* Jarak di atas dan bawah */
-    padding-left: 20px; /* Padding di sebelah kiri untuk daftar */
+    margin: 10px 0; 
+    padding-left: 20px;
 }
 
 .container p {
-    line-height: 1.6; /* Jarak antar baris */
-    margin-bottom: 15px; /* Jarak di bawah paragraf */
-    color: #444; /* Warna teks */
+    line-height: 1.6; 
+    margin-bottom: 15px;
+    color: #444; 
 }
 
-/* Styling untuk form berlangganan */
+
 .subscription-form-container {
-    background-color: #fafafa; /* Latar belakang ringan dan bersih */
-    padding: 40px 20px; /* Padding sama dengan Jessen Lifestyle Section */
-    text-align: center; /* Teks di tengah */
-    border-radius: 10px; /* Sudut yang membulat */
-    margin: 50px 0; /* Margin atas dan bawah */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Efek bayangan untuk memberikan kedalaman */
+    background-color: #fafafa; 
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 10px; 
+    margin: 50px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
 }
 
 .subscription-form-container h2 {
-    font-size: 2.2em; /* Ukuran font yang lebih besar */
-    margin-bottom: 15px; /* Margin bawah */
-    color: #333; /* Warna teks yang lebih tegas */
+    font-size: 2.2em;
+    margin-bottom: 15px; 
+    color: #333; 
 }
 
 .subscription-form-container p {
-    font-size: 1.1em; /* Ukuran font untuk paragraf */
-    color: #555; /* Warna teks yang ringan namun tetap kontras */
-    margin-bottom: 25px; /* Margin bawah */
+    font-size: 1.1em; 
+    color: #555; 
+    margin-bottom: 25px; 
 }
 
 .subscription-form-container form {
-    display: flex; /* Menggunakan flexbox untuk tata letak */
-    justify-content: center; /* Pusatkan secara horizontal */
-    align-items: center; /* Pusatkan secara vertikal */
-    gap: 15px; /* Jarak antar elemen dalam form */
-    flex-wrap: wrap; /* Agar form responsif */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 .subscription-form-container input[type="email"] {
-    padding: 12px 18px; /* Padding pada input */
-    font-size: 1em; /* Ukuran font untuk input */
-    border: 2px solid #ddd; /* Border yang lebih tebal */
-    border-radius: 5px; /* Radius sudut input */
-    width: 320px; /* Lebar input */
-    max-width: 100%; /* Maksimum lebar responsif */
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Memberi kesan teks terbenam */
-    transition: border-color 0.3s ease; /* Transisi border yang halus */
+    padding: 12px 18px; 
+    font-size: 1em; 
+    border: 2px solid #ddd; 
+    border-radius: 5px; 
+    width: 320px; 
+    max-width: 100%; 
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); 
+    transition: border-color 0.3s ease; 
 }
 
 .subscription-form-container input[type="email"]:focus {
-    border-color: #38b6ff; /* Warna border saat input diaktifkan */
-    outline: none; /* Menghilangkan outline default */
+    border-color: #38b6ff; 
+    outline: none; 
 }
 
 .subscription-form-container button {
-    padding: 12px 30px; /* Padding untuk tombol */
-    font-size: 1em; /* Ukuran font untuk tombol */
-    background-color: #38b6ff; /* Warna tombol yang serasi */
-    color: white; /* Warna teks tombol */
-    border: none; /* Tanpa border */
-    border-radius: 5px; /* Radius sudut tombol */
-    cursor: pointer; /* Pointer saat hover */
-    transition: background-color 0.3s ease; /* Transisi warna tombol */
+    padding: 12px 30px; 
+    font-size: 1em; 
+    background-color: #38b6ff; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
 }
 
 .subscription-form-container button:hover {
-    background-color: #2a9ce2; /* Warna tombol saat di hover */
+    background-color: #2a9ce2; 
 }
 
-/* Media query untuk responsivitas */
+
 @media (max-width: 768px) {
     .subscription-form-container form {
-        flex-direction: column; /* Mengubah arah flex menjadi kolom pada perangkat kecil */
-        gap: 20px; /* Jarak antara input dan tombol pada layar kecil */
+        flex-direction: column; 
+        gap: 20px;
     }
 
     .subscription-form-container input[type="email"] {
-        width: 100%; /* Input email memenuhi lebar layar pada perangkat mobile */
+        width: 100%; 
     }
 }
 
 
+#ads-container {
+    position: fixed;
+    bottom: -100%; 
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: bottom 0.5s ease;
+    z-index: 9999; 
+}
+
+
+#ads-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#ads-content img {
+    width: 200px; 
+    height: auto;
+    margin-bottom: 10px;
+}
+
+#ads-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#ads-content button {
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#ads-content button:hover {
+    background-color: #c0392b;
+}
