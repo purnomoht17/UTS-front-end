@@ -1,6 +1,6 @@
 $(document).ready(function () {
     const apiKey = 'd3fbbfb21d09467d88ec99f38715d4ab';
-    const url = `https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=${apiKey}`;
+    const url = `https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=${apiKey}`;
     let allArticles = [];
 
     // Fungsi untuk render berita
