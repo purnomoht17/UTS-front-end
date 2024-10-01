@@ -28,29 +28,40 @@ $(document).ready(function () {
         $('#news-container').html(newsContent);
     }
 
-    // Mendapatkan data dari API NewsAPI
+    // Mendapatkan data dari API
     $.getJSON(url, function (data) {
         allArticles = data.articles;
-        renderNews(allArticles); // Render semua artikel saat pertama kali dimuat
+        renderNews(allArticles); // Render berita saat pertama kali dimuat
     }).fail(function () {
         $('#news-container').html('<p>Gagal mengambil berita. Silakan coba lagi nanti.</p>');
     });
 
-    // Fungsi untuk mencari artikel berdasarkan judul
+    // Fungsi pencarian artikel
     function searchArticles() {
         const searchTerm = $('#search-input').val().toLowerCase();
-        const filteredArticles = allArticles.filter(article => 
+        const filteredArticles = allArticles.filter(article =>
             article.title.toLowerCase().includes(searchTerm)
         );
-        renderNews(filteredArticles); // Render hasil pencarian
+        renderNews(filteredArticles);
+
+        // Scroll ke bagian berita terkait setelah pencarian
+        $('html, body').animate({
+            scrollTop: $("#news-container").offset().top
+        }, 800);
     }
+
+    // Event listener untuk search icon
+    $('#search-icon').click(function () {
+        $('.search-container').toggleClass('active'); // Tampilkan atau sembunyikan input dan tombol
+        $('#search-input').focus(); // Fokus ke input
+    });
 
     // Event listener untuk tombol search
     $('#search-button').click(function () {
         searchArticles();
     });
 
-    // Event listener untuk tekan enter di input search
+    // Event listener untuk enter di input search
     $('#search-input').keypress(function (e) {
         if (e.which === 13) { // Tekan Enter
             searchArticles();
