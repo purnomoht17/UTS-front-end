@@ -147,17 +147,17 @@ h3 span {
 }
 
 .search-container i:hover {
-    color: #f39c12; /* Warna saat hover pada ikon search */
+    color: #f39c12; 
 }
 
 .search-container input {
     height: 30px;
-    width: 200px;
+    width: 120px;
     padding: 5px;
     border: none;
     border-radius: 5px;
     margin-left: 10px;
-    display: none; /* Mulai dengan input tersembunyi */
+    display: none; 
 }
 
 .search-container button {
@@ -169,16 +169,15 @@ h3 span {
     background-color: #f39c12;
     color: white;
     cursor: pointer;
-    display: none; /* Mulai dengan tombol tersembunyi */
+    display: none; 
 }
 
-/* Tampilkan input dan tombol saat search aktif */
+
 .search-container.active input,
 .search-container.active button {
     display: inline-block;
 }
 
-/* Gaya tambahan untuk transisi smooth */
 .search-container input,
 .search-container button {
     transition: all 0.3s ease;
