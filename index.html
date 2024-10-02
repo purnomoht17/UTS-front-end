@@ -15,24 +15,23 @@
                 </a>
                 <span>Jessen Lifestyle</span>
             </div>
-            <div class="nav-links">
-                <div><a href="/index.html">Home</a></div>
-                <div><a href="/pages/makanansehat/index.html">Kesehatan & Makanan</a></div>
-                <div><a href="/pages/olahraga/index.html">Olahraga</a></div>
-                <div><a href="/pages/Entertainment/index.html">Entertainment</a></div>
-                <div><a href="/pages/teknologi/index.html">Teknologi</a></div>
-                <div><a href="/pages/kontak/index.html">Kontak</a></div>
-            </div >
+            <!-- Menu Icon (Burger Icon) for smaller screens -->
+            <div id="menu-icon">&#9776;</div>
 
-            <div class="hamburger">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-            </div>
+            <nav class="navbar">
+                <div class="nav-links">
+                    <div><a href="/index.html">Home</a></div>
+                    <div><a href="/pages/makanansehat/index.html">Informasi Kesehatan & Makanan Sehat</a></div>
+                    <div><a href="/pages/olahraga/index.html">Olahraga</a></div>
+                    <div><a href="/pages/gayahidup/index.html">Gaya Hidup Sehat</a></div>
+                    <div><a href="/pages/teknologi/index.html">Teknologi</a></div>
+                    <div><a href="/pages/kontak/index.html">Kontak</a></div>
+                </div>
+            </nav>
         </header>
 
         <!-- Video background -->
-        <video id="background-video" class="background-video" autoplay muted loop>
+        <video id="background-video" class="background-video" autoplay muted>
             <source src="assets/videos/background.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
@@ -43,11 +42,6 @@
             <p>Discover your way of life</p>
         </div>
     </div>
-
-    <div>
-        <h3>Berikut adalah beberapa pilihan <span>konten</span> yang bisa membantu Anda memulai perjalanan gaya hidup yang lebih sehat dan produktif!</h3>
-    </div>
-    
 
     <!-- Content container -->
     <div class="content-container">
@@ -108,5 +102,13 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
+
+    <div id="ads-container">
+        <div id="ads-content">
+            <img src="/assets/images/iklan1.jpg" alt="Iklan" />
+            <p>Promo Spesial Hari Ini! Diskon hingga 50%</p>
+            <button id="close-ads">Tutup</button>
+        </div>
+    </div>
 </body>
 </html>

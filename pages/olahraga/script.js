@@ -24,14 +24,66 @@ $(document).ready(function () {
             newsContent = '<p>No news available.</p>';
         }
 
+        // Masukkan hasil ke container
         $('#news-container').html(newsContent);
     }
 
-    // Mendapatkan data dari API
+    // Mendapatkan data dari API NewsAPI
     $.getJSON(url, function (data) {
         allArticles = data.articles;
-        renderNews(allArticles); // Render berita saat pertama kali dimuat
+        renderNews(allArticles); // Render semua artikel saat pertama kali dimuat
     }).fail(function () {
         $('#news-container').html('<p>Gagal mengambil berita. Silakan coba lagi nanti.</p>');
     });
+
+    // Fungsi untuk mencari artikel berdasarkan judul
+    function searchArticles() {
+        const searchTerm = $('#search-input').val().toLowerCase();
+        const filteredArticles = allArticles.filter(article => 
+            article.title.toLowerCase().includes(searchTerm)
+        );
+        renderNews(filteredArticles); // Render hasil pencarian
+    }
+
+    // Event listener untuk tombol search
+    $('#search-button').click(function () {
+        searchArticles();
+    });
+
+    // Event listener untuk tekan enter di input search
+    $('#search-input').keypress(function (e) {
+        if (e.which === 13) { // Tekan Enter
+            searchArticles();
+        }
+    });
+});
+
+$(document).ready(function() {
+   
+    let adDisplayCount = sessionStorage.getItem('adDisplayCount') || 0;
+
+    
+    function showAd() {
+        if (adDisplayCount < 6) {
+            setTimeout(function() {
+                $('#ads-container').css('bottom', '0'); 
+                adDisplayCount++;
+                sessionStorage.setItem('adDisplayCount', adDisplayCount); 
+            }, 3000);
+        }
+    }
+
+ 
+    showAd();
+
+    
+    $('#close-ads').on('click', function() {
+        $('#ads-container').css('bottom', '-100%');
+    });
+
+  
+    if (!sessionStorage.getItem('pageVisited')) {
+        sessionStorage.setItem('pageVisited', 'true');
+        sessionStorage.setItem('adDisplayCount', 0); 
+    }
 });
