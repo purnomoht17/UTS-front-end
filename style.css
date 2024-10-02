@@ -50,7 +50,6 @@ header {
     left: 0;
     width: 100%;
     z-index: 2;
-    background: var(--main-bg-color);
 }
 
 header a {
@@ -63,35 +62,71 @@ header a:hover {
     color: #f39c12; /* Ganti warna saat hover */
 }
 
+/* Styling search-container */
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search-container i {
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.search-container i:hover {
+    color: #f39c12; /* Warna saat hover pada ikon search */
+}
+
+.search-container input {
+    height: 30px;
+    width: 200px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    display: none; /* Mulai dengan input tersembunyi */
+}
+
+.search-container button {
+    height: 30px;
+    padding: 5px 10px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f39c12;
+    color: white;
+    cursor: pointer;
+    display: none; /* Mulai dengan tombol tersembunyi */
+}
+
+/* Tampilkan input dan tombol saat search aktif */
+.search-container.active input,
+.search-container.active button {
+    display: inline-block;
+}
+
+/* Gaya tambahan untuk transisi smooth */
+.search-container input,
+.search-container button {
+    transition: all 0.3s ease;
+}
+
+/* Pastikan link di dalam dropdown juga berwarna putih */
+.dropdown-content a {
+    color: white;
+}
+
+.dropdown-content a:hover {
+    color: #f39c12; /* Warna saat hover di dropdown */
+}
+
 header .logo {
     display: flex;
     align-items: center;
 }
-
-header h1 {
-    font-size: 3rem; /* Contoh ukuran besar */
-    margin-bottom: 10px;
-}
-
-header nav {
-    margin-top: 10px;
-  }
-  
-  header nav ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  header nav ul li {
-    display: inline-block;
-    margin: 0 15px;
-  }
-  
-  header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-  }
 
 header .logo img {
     width: 50px;
@@ -114,6 +149,53 @@ header .nav-links div {
     display: flex;
     gap: 20px;
     margin-right: 40px;
+}
+
+.dropdown {
+    position: relative;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.9);
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    padding: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 3;
+}
+
+.dropdown-content div {
+    color: white;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content div:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .nav-links > div {
@@ -155,7 +237,6 @@ video.background-video {
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: wrap;
-    flex-direction: row;
     justify-content: center;
     padding: 50px 20px;
     background-color: #f4f4f4;
@@ -234,7 +315,7 @@ video.background-video {
     padding: 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    margin: 0 10px;
+    margin: 0 10px; /* Jarak antar sisi */
 }
 
 .sisi-kiri h1 {
@@ -299,6 +380,7 @@ video.background-video {
 
 
 #news-container {
+    margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -405,7 +487,7 @@ footer p {
         flex-direction: column;
         align-items: center;
     }
-    
+
     #news-container .news-item {
         max-width: 100%; 
     }
@@ -577,131 +659,3 @@ footer p {
 #ads-content button:hover {
     background-color: #c0392b;
 }
-
-.navbar {
-    display: flex;
-    gap: 2rem;
-  }
-  
-  #menu-icon {
-    display: none; /* Hidden by default */
-    font-size: 30px; /* Increase size for better visibility */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    color: white; /* Make the icon color white */
-    margin-left: 20px; /* Add margin for spacing */
-}
-  
-  /* Responsive styling with media query */
-  @media (max-width: 1285px) {
-    .services-container {
-      padding-bottom: 7rem;
-      grid-template-columns: repeat(2, 1fr);
-      margin: 0 5rem;
-    }
-  }
-  
-  @media (max-width: 991px) {
-    header {
-      padding: 2rem 3%;
-    }
-  
-    section {
-      padding: 10rem 3% 2rem;
-    }
-  
-    .timeline-items::before {
-      left: 7px;
-    }
-  
-    .timeline-item:nth-child(odd) {
-      padding-right: 0;
-      text-align: left;
-    }
-  
-    .timeline-item:nth-child(even),
-    .timeline-item:nth-child(odd) {
-      padding-left: 37px;
-    }
-  
-    .timeline-dot {
-      left: 0;
-    }
-  
-    .services {
-      padding-bottom: 7rem;
-    }
-  
-    .portfolio .wrapper {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  
-    .contact form {
-      flex-direction: column;
-    }
-  
-    .footer {
-      padding: 2rem 3%;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    #menu-icon {
-      display: block;
-    }
-  
-    .navbar {
-      position: absolute;
-      top: 100%;
-      right: 0;
-      width: 50%;
-      padding: 1rem 3%;
-      background: var(--second-bg-color);
-      backdrop-filter: blur(20px);
-      border-bottom-left-radius: 2rem;
-      border-left: 2px solid var(--main-color);
-      border-bottom: 2px solid var(--main-color);
-      display: none;
-    }
-  
-    .navbar.active {
-      display: block;
-    }
-  
-    .navbar a {
-      display: block;
-      font-size: 2rem;
-      margin: 3rem 0;
-    }
-  
-    .home {
-      flex-direction: column-reverse;
-      margin: 5rem 4rem;
-    }
-  
-    .home-content h3 {
-      font-size: 2.6rem;
-    }
-  
-    .home-content h1 {
-      font-size: 5rem;
-    }
-  
-    .home-content p {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-  
-    .home-img img {
-      width: 56vw;
-    }
-  
-    .services h2 {
-      margin-bottom: 3rem;
-    }
-  
-    .services-container {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  }
-
-  

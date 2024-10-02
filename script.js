@@ -155,9 +155,3 @@ $(document).ready(function() {
     }
 });
 
-// Menu toggle script for mobile view
-$(document).ready(function() {
-    $('#menu-icon').click(function() {
-        $('.navbar').toggleClass('active');
-    });
-});
