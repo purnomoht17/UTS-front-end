@@ -74,7 +74,7 @@ $(document).ready(function() {
 
     
     function showAd() {
-        if (adDisplayCount < 6) {
+        if (adDisplayCount < 4) {
             setTimeout(function() {
                 $('#ads-container').css('bottom', '0'); 
                 adDisplayCount++;
@@ -98,3 +98,9 @@ $(document).ready(function() {
     }
 });
 
+const hamburger = document.getElementById('hamburger-menu');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
